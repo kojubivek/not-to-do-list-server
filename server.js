@@ -7,26 +7,8 @@ const PORT = 8000;
 app.use(morgan("dev"));
 
 //api endpoints
-
-("");
-//workflow:CRUD
-//Create:receive new task and store in the database
-app.post("/api/v1/task", (req, res) => {
-  res.json({ message: "tod get method" });
-});
-//READ: read data from DATABASE and return to the client
-app.get("/api/v1/task", (req, res) => {
-  res.json({ message: "tod get get" });
-});
-//update: update some information of existing data in the database and respond client accordingly
-
-app.put("/api/v1/task", (req, res) => {
-  res.json({ message: "tod get put" });
-});
-//D(delete): delete data(s) from database and response clent accordingly
-app.delete("/api/v1/task", (req, res) => {
-  res.json({ message: "tod get delete" });
-});
+import taskrouter from "./src/routers/taskrouter.js";
+app.use("/api/v1/task", taskrouter);
 
 console.log(app);
 
