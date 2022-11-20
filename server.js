@@ -6,7 +6,9 @@ const PORT = 8000;
 //middleware
 app.use(morgan("dev"));
 app.use(express.json());
-
+//db Connection
+import mongoConnect from "./src/config/dbCongif.js";
+mongoConnect();
 //api endpoints
 import taskrouter from "./src/routers/taskrouter.js";
 app.use("/api/v1/task", taskrouter);
