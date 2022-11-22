@@ -20,7 +20,7 @@ router.post("/", async (req, res) => {
   try {
     const result = await insertTask(req.body);
     console.log(result);
-    res.json({ status: "succes", message: "new message has been added" });
+    res.json({ status: "success", message: "new message has been added" });
   } catch (error) {
     res.json({ status: error, message: error.message });
   }
@@ -47,7 +47,7 @@ router.put("/", async (req, res) => {
   //   }
   //   return item;
   // });
-  if (resutl?._id) {
+  if (result?._id) {
     res.json({
       status: "success",
       message: "Type was changed",

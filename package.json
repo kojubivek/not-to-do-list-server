@@ -13,6 +13,8 @@
   "author": "Bivek Koju",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
+    "cros": "^1.0.1",
     "express": "^4.18.2",
     "mongoose": "^6.7.2",
     "morgan": "^1.10.0"
